@@ -15,7 +15,7 @@ public:
 
 	void setLength(double);////function that if l=w program ends because shape is a square not rectangle.
 	void setWidth(double);//function that if w=l program ends because shape is a square not rectangle.
-	void DrawRectangle(double l, double w);
+	void DrawRectangle();
 
 	double getLength() const {//function that returns length.
 

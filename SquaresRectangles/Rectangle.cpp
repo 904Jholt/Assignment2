@@ -25,44 +25,30 @@ void Rectangle::setWidth(double w)
 	width = w;
 }
 
-void Rectangle::DrawRectangle(double l, double w)
+void Rectangle::DrawRectangle()
 {
+	int length = width;
+	int row = 0;
+	int col = 0;
+	int symbol = (1, 2, 3);
+
 	if (symbol == 1) {
-		cout << "O";
-	}
-	else {
+		cout << "X";
 		if (symbol == 2) {
-			cout << "X";
-		}
-		else {
-			if (symbol == 3) {
-				cout << "$";
-			}
-			else {
-				if (symbol == 4) {
-					cout << "@";
+			cout << "O";
+				if (symbol == 3) {
+					cout << "V";
 				}
-				else {
-					if (symbol == 5) {
-						cout << "#";
-					}
-					else {
-						if (symbol == 6) {
-							cout << "V";
-						}
-					}
-				}
-			}
 		}
 	}
 
-	while (l < 10) {
+	while (row < 10) {
 		cout << symbol;
-		l++;
-		while (w < 10) {
+		row++;
+		while (col < 10) {
 			cout << symbol;
-			w++;
-			if (l == 1 || l == 10 || w == 1 || w == 10) {
+			row++;
+			if (row == 1 || row == 10 || col == 1 || col == 10) {
 				cout << "*";
 			}
 			else{
@@ -71,8 +57,4 @@ void Rectangle::DrawRectangle(double l, double w)
 		}
 	}
 
-}
-
-void Rectangle::DrawRectangle()
-{
 }

@@ -21,6 +21,7 @@ int main()//
 	double side = 1;//integer initialized to 1
 	double length = 1;//integer initialized to 1
 	double width = 1;//integer initialized to 1
+	int choice;
 
 	cout << "Let's make a Square!\n";
 	cout << "Please enter the length of the side of your Square, the press ENTER\n";
@@ -40,6 +41,39 @@ int main()//
 	cout << setprecision(2);
 	cout<< "The area of your Rectangle = " << userRect.getArea() << endl;//stored function result
 	cout << "The perimeter of your Rectangle = " << userRect.getPerimter() << endl;//stored function result
-	return 0;
+	cout << " /nPlease choose from shapes below"<<endl;
+	
+	do {
+		cout << "1.Square 1" << endl << "2.Square 2" << endl << "3.Square 3" << endl << "4.Rectangle 4" << endl << "5.Rectangle 5" << endl << "6.Rectangle 6" << endl << "0.Exit this Application" << endl;
+		cin >> choice;
 
+		switch (choice)
+		{
+		case 0:
+			return 0;
+			break;
+		case 1:
+			cout << "U/n";
+			break;
+		case 2:
+			cout << "Z/n";
+			break;
+		case 3:
+			cout << "Q/n";
+			break;
+		case 4:
+			cout << "X/n";
+			break;
+		case 5:
+			cout << "O/n";
+			break;
+		case 6:
+			cout << "V/n";
+			break;
+		}
+	} while (choice!=choice);
+	{
+		cout << "Invalid";
+	}
+	
 }

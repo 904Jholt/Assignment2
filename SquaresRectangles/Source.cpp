@@ -21,8 +21,10 @@ int main()//
 	double side = 1;//integer initialized to 1
 	double length = 1;//integer initialized to 1
 	double width = 1;//integer initialized to 1
+	Square square1(3), square2(5), square3(4);
+	Rectangle rectangle1(3,4), rectangle2(3,6), rectangle3(4,9);
 	int choice;
-
+	
 	cout << "Let's make a Square!\n";
 	cout << "Please enter the length of the side of your Square, the press ENTER\n";
 	cin >> side;
@@ -42,38 +44,42 @@ int main()//
 	cout<< "The area of your Rectangle = " << userRect.getArea() << endl;//stored function result
 	cout << "The perimeter of your Rectangle = " << userRect.getPerimter() << endl;//stored function result
 	cout << " /nPlease choose from shapes below"<<endl;
-	
+
 	do {
-		cout << "1.Square 1" << endl << "2.Square 2" << endl << "3.Square 3" << endl << "4.Rectangle 4" << endl << "5.Rectangle 5" << endl << "6.Rectangle 6" << endl << "0.Exit this Application" << endl;
+		cout << "1.Square 1" << endl << "2.Square 2" << endl << "3.Square 3" << endl << "4.Rectangle 1" << endl << "5.Rectangle 2" << endl << "6.Rectangle 3" << endl << "0.Exit this Application" << endl;
 		cin >> choice;
 
 		switch (choice)
 		{
-		case 0:
-			return 0;
-			break;
 		case 1:
-			cout << "U/n";
-			break;
+			square1;
+			Square1.DrawSquare();
 		case 2:
-			cout << "Z/n";
+			square2;
+			Square2.DrawSquare();
 			break;
 		case 3:
-			cout << "Q/n";
-			break;
+			square3;
+			Square3.DrawSquare();
 		case 4:
-			cout << "X/n";
+			rectangle1;
+			Rectangle.DrawRectangle();
 			break;
 		case 5:
-			cout << "O/n";
+			rectangle2;
+			Rectangle.DrawRectangle();
 			break;
 		case 6:
-			cout << "V/n";
+			rectangle3;
+			Rectangle.DrawRectangle();
+			break;
+		case 0:
+			break;
+		default:
+			cout << "Invalid choice";
 			break;
 		}
 	} while (choice!=choice);
-	{
-		cout << "Invalid";
-	}
+	
 	
 }

@@ -25,30 +25,29 @@ void Rectangle::setWidth(double w)
 	width = w;
 }
 
-void Rectangle::DrawRectangle()
+void Rectangle::DrawRectangle() //member function to draw shape on screen.
 {
-	int length = width;
 	int row = 0;
 	int col = 0;
-	int symbol = (1, 2, 3);
+	int choice = (4, 5, 6);
 
-	if (symbol == 1) {
+	if (choice == 4) {  //if statements to determine what symbol to print.
 		cout << "X";
-		if (symbol == 2) {
+		if (choice == 5) {
 			cout << "O";
-				if (symbol == 3) {
+				if (choice == 6) {
 					cout << "V";
 				}
 		}
 	}
 
-	while (row < 10) {
-		cout << symbol;
+	while (row < 10) {          //nested while looping to draw Rectangle.
+		cout << choice;
 		row++;
 		while (col < 10) {
-			cout << symbol;
+			cout << choice;
 			row++;
-			if (row == 1 || row == 10 || col == 1 || col == 10) {
+			if (row == 1 || row == 10 || col == 1 || col == 10) {     //logical or operator to print inside shape.
 				cout << "*";
 			}
 			else{

@@ -15,6 +15,7 @@ public:
 	Square(double side);
 
 	void setSide(double) const;
+	void DrawSquare();
 
 
 	double getPerimter() const;//funtion that returns perimeter.

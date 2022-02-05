@@ -18,30 +18,30 @@ void Square::setSide(double s) const
 	s = s;
 }
 
-void Square::DrawSquare()
-{
-	int row = 0; 
-	int col = 0;
-	int symbol = (1, 2, 3);
+void Square::DrawSquare()//member function thats called from object.
+{ 
+	int choice=(1,2,3);
 
-		if (symbol == 1) { //if statements to determine what symbol is used to draw.
+		if (choice == 1) { //if statements to determine what symbol is used to draw.
 			cout << "W";
-			if (symbol == 2) {
+		 if (choice == 2) {
 				cout << "D";
-				if (symbol == 3) {
-					cout << "U";
+		  if (choice == 3) {
+				 cout << "U";
 				}
 			}
-	}
+	 }
 
-	for (int r = 0, r < row; r++) {  //nested for loop that should draw square on screen.
-		for (int c = 0, c < col; c++) {
-			cout << symbol;
-			if (row == 1 || row == 10 || col == 1 || col == 10) {     //logical or operator to print inside shape.
+		for (int row = 0; row < 10; row++) {  //nested for loop that should draw square on screen.
+			for (int col = 0; col < 10; col++) {
+			cout << choice;
+			if (row == 1 || row == 10 || col == 1 || col == 10) {
 				cout << "*";
 			}
 			else {
 				cout << " ";
+			}
+			
 		}
 		
 	}

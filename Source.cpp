@@ -21,8 +21,8 @@ int main()//
 	double side = 1;//integer initialized to 1
 	double length = 1;//integer initialized to 1
 	double width = 1;//integer initialized to 1
-	Square square1(3), square2(5), square3(4);
-	Rectangle rectangle1(3,4), rectangle2(3,6), rectangle3(4,9);
+	Square square1(3), square2(5), square3(4);//initiliazed shapes for squares
+	Rectangle rectangle1(3,4), rectangle2(3,6), rectangle3(4,9);//initiliazed shapes for rectangles
 	int choice;
 	
 	cout << "Let's make a Square!\n";
@@ -45,38 +45,40 @@ int main()//
 	cout << "The perimeter of your Rectangle = " << userRect.getPerimter() << endl;//stored function result
 	cout << " /nPlease choose from shapes below"<<endl;
 
+	//this is a do while loop that prints a list of shapes for the user to choose, stores the userschoice.
 	do {
 		cout << "1.Square 1" << endl << "2.Square 2" << endl << "3.Square 3" << endl << "4.Rectangle 1" << endl << "5.Rectangle 2" << endl << "6.Rectangle 3" << endl << "0.Exit this Application" << endl;
 		cin >> choice;
 
-		switch (choice)
+		switch (choice)//switch menu that calls the draw function from each respective class.
 		{
 		case 1:
 			square1;
-			Square1.DrawSquare();
+			square1.DrawSquare();
 		case 2:
 			square2;
-			Square2.DrawSquare();
+			square2.DrawSquare();
 			break;
 		case 3:
 			square3;
-			Square3.DrawSquare();
+			square3.DrawSquare();
+			break;
 		case 4:
 			rectangle1;
-			Rectangle.DrawRectangle();
+			rectangle1.DrawRectangle();
 			break;
 		case 5:
 			rectangle2;
-			Rectangle.DrawRectangle();
+			rectangle2.DrawRectangle();
 			break;
 		case 6:
 			rectangle3;
-			Rectangle.DrawRectangle();
+			rectangle3.DrawRectangle();
 			break;
 		case 0:
 			break;
 		default:
-			cout << "Invalid choice";
+			cout << "Invalid choice"; //output if user tries to enter value outside of given range.
 			break;
 		}
 	} while (choice!=choice);

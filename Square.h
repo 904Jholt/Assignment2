@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -8,6 +9,7 @@ class Square
 private:
 
 	double side;//data member.
+	int choice;
 
 public:
 
